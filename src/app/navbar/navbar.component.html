@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active" style="color: #cccc00 ;">WILD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['/home']" routerLinkActive="router-link-active">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/search']" routerLinkActive="router-link-active">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]="['/aboutus']" routerLinkActive="router-link-active">About Us</a>
+          </li>
+        </ul>
+          <input class="form-control me-sm-2" style="width: 200px;" type="text" placeholder="Search Any Video" [(ngModel)]="searchQuery" (keyup.enter)="searchVideos()">
+          <button class="btn btn-secondary my-2 my-sm-0" (click)="searchVideos()">Search</button>
+      </div>
+    </div>
+  </nav>
